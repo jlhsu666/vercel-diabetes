@@ -1,10 +1,10 @@
-from flask import Flask
+from flask import Flask,render_template
 
 app=Flask(__name__)
 
 @app.route('/')
 def home():
-    return 'Hello world XXXX'
+    return render_template("form.html")
 
 @app.route('/about')
 def about():
