@@ -43,7 +43,7 @@ def aml():
 
     req = urllib.request.Request(url, body, headers)
 
-    # htmlstr="<html><body>"
+    htmlstr="<html><body>"
 
     try:
         response = urllib.request.urlopen(req)
