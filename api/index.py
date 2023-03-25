@@ -41,7 +41,7 @@ def aml():
 
     req = urllib.request.Request(url, body, headers)
 
-    htmlstr="<html><body>"
+    # htmlstr="<html><body>"
 
     try:
         response = urllib.request.urlopen(req)
@@ -58,7 +58,7 @@ def aml():
 
     htmlstr=htmlstr+"</body></html>"
 
-    return htmlstr
+    return str(result['Results']['WebServiceOutput0'][0]['Scored Labels'])
 
 @app.route('/about')
 def about():
