@@ -54,9 +54,9 @@ def aml():
 
         # Print the headers - they include the requert ID and the timestamp, which are useful for debugging the failure
         print(error.info())
-        print(json.load(error.read().decode("utf8", 'ignore')))
+        # print(json.load(error.read().decode("utf8", 'ignore')))
 
-        htmlstr=htmlstr+"</body></html>"
+    htmlstr=htmlstr+"</body></html>"
 
     return htmlstr
 
