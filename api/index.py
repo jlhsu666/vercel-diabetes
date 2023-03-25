@@ -1,5 +1,6 @@
-from flask import Flask,render_template
-import urllib.request
+from flask import Flask,request,render_template
+import urllib
+import json
 
 app=Flask(__name__)
 
