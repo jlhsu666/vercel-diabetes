@@ -41,18 +41,24 @@ def aml():
 
     req = urllib.request.Request(url, body, headers)
 
+    htmlstr="<html><body>"
+
     try:
         response = urllib.request.urlopen(req)
 
-        result = response.read()
-        print(result)
+        result = json.load(response.read())
+        htmlstr=result['Results']['WebServiceOutput0'][0]['Scored Labels']
+        # print(result)
     except urllib.error.HTTPError as error:
         print("The request failed with status code: " + str(error.code))
 
         # Print the headers - they include the requert ID and the timestamp, which are useful for debugging the failure
         print(error.info())
-        print(error.read().decode("utf8", 'ignore'))
+        print(json.load(error.read().decode("utf8", 'ignore')))
 
+        htmlstr=htmlstr+"</body></html>"
+
+    return htmlstr
 
 @app.route('/about')
 def about():
