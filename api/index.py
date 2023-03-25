@@ -14,14 +14,14 @@ def aml():
     "Inputs": {
         "input1": [       
         {
-            "Pregnancies": 0,
-            "Glucose": 137,
-            "BloodPressure": 40,
-            "SkinThickness": 35,
-            "Insulin": 168,
-            "BMI": 43.1,
-            "DiabetesPedigreeFunction": 2.288,
-            "Age": 33,
+            "Pregnancies": request.values['p1'],
+            "Glucose": request.values['p2'],
+            "BloodPressure": request.values['p3'],
+            "SkinThickness": request.values['p4'],
+            "Insulin": request.values['p5'],
+            "BMI": request.values['p6'],
+            "DiabetesPedigreeFunction": request.values['p7'],
+            "Age": request.values['p8'],
             "Outcome": 1
         }
         ]
