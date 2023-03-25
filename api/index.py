@@ -47,7 +47,7 @@ def aml():
         response = urllib.request.urlopen(req)
 
         result = json.load(response.read())
-        htmlstr=result['Results']['WebServiceOutput0'][0]['Scored Labels']
+        htmlstr=htmlstr+str(result['Results']['WebServiceOutput0'][0]['Scored Labels'])
         # print(result)
     except urllib.error.HTTPError as error:
         print("The request failed with status code: " + str(error.code))
