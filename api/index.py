@@ -62,7 +62,7 @@ def aml():
     htmlstr=htmlstr+"</body></html>"
 
     # return "hello"
-    return str(result['Results']['WebServiceOutput0'][0]['Scored Labels'])
+    return htmlstr
 
 @app.route('/about')
 def about():
