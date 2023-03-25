@@ -49,6 +49,7 @@ def aml():
         response = urllib.request.urlopen(req)
 
         result = json.loads(response.read())
+        htmlstr=htmlstr+"依據您輸入的參數，經過數據分析模型比對，罹患糖尿病的機率為"
         htmlstr=htmlstr+str(result['Results']['WebServiceOutput0'][0]['Scored Labels'])
         # print(result)
     except urllib.error.HTTPError as error:
