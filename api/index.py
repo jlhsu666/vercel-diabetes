@@ -31,9 +31,9 @@ def aml():
 
     body = str.encode(json.dumps(data))
 
-    url = 'http://20.70.9.109:80/api/v1/service/brain/score'
+    url = 'http://40.74.116.237:80/api/v1/service/brain/score'
     # Replace this with the primary/secondary key or AMLToken for the endpoint
-    api_key = '9KOw0kBlhyVauSeGfgeu72LH4UEx52Wd'
+    api_key = 'NlSRll6VYlWyCbvcUcpdJwcfWgGamh22'
 
     if not api_key:
         raise Exception("A key should be provided to invoke the endpoint")
